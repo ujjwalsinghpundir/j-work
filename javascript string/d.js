@@ -184,5 +184,93 @@ console.log(strip('w3resource '));
 console.log(strip(' w3resource')); 
 console.log(strip(' w3resource '));
 
+q37-=function compare_strings(str1, str2) {
+  const lowerStr1 = str1.toLowerCase();
+  const lowerStr2 = str2.toLowerCase();
+
+  return lowerStr1 === lowerStr2;
+
+  q35=function strip_html_tags(str) {
+  return str.replace(/<[^>]*>/g, '');
+}
+console.log(strip_html_tags('<p><strong><em>PHP Exercises</em></strong></p>'));
+
+
+  q34=function sentenceCase(str) {
+  return str
+    .toLowerCase()
+    .split('. ') 
+    .map(sentence => {
+      return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+    })
+    .join('. ');     "
+}
+console.log(sentenceCase('PHP exercises. python exercises.'));
+
+q33-function remove_non_word(str) {
+  return str.replace(/[^\w\s-]+/g, '');
+}
+console.log(remove_non_word('PHP ~!@#$%^&*()+`-={}[]|\\:";\'/?><., MySQL'));
+
+  q30= function string_endsWith(str, suffix) {
+  if (suffix === '') return false;
+  return str.endsWith(suffix);
+}
+console.log(string_endsWith('JS PHP PYTHON', 'PYTHON'));  
+console.log(string_endsWith('JS PHP PYTHON', ''));
+
+
+  q28=function hexToAscii(hex) {
+  let ascii = '';
+  for (let i = 0; i < hex.length; i += 2) {
+    let hexPair = hex.substr(i, 2);
+    let decimal = parseInt(hexPair, 16);
+    ascii += String.fromCharCode(decimal);
+  }
+
+  return ascii;
+}
+
+console.log(hexToAscii('48656c6c6f'));       
+console.log(hexToAscii('4a5320526f636b73'));
+
+q26=function removeFirstOccurrence(str, search) {
+  return str.replace(search, '');
+}
+console.log(removeFirstOccurrence('The quick brown fox jumps over the lazy dog', 'the'));
+
+console.log(removeFirstOccurrence('Hello world, hello again!', 'hello'));
+
+q25=function alphabetize_string(str) {
+  return str.replace(/\s+/g, '')  
+            .split('')            
+            .sort()               
+            .join('');            
+}
+console.log(alphabetize_string('JavaScript'));  
+console.log(alphabetize_string('web dev'));
+
+q24=function truncate(str, numWords) {
+  const words = str.split(' ');
+  const truncated = words.slice(0, numWords);
+
+  return truncated.join(' ');
+}
+console.log(truncate('The quick brown fox jumps over the lazy dog', 4));
+
+q23=function strip(str) {
+  return str.trim();
+}
+console.log(strip('w3resource ')); 
+console.log(strip(' w3resource')); 
+console.log(strip(' w3resource '));
+  
+  
+  
+  
+  
+}
+console.log(compare_strings('abcd', 'AbcD')); // true
+console.log(compare_strings('ABCD', 'Abce')); // false
 
 
